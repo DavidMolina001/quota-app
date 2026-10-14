@@ -23,7 +23,11 @@ codesign --verify --strict "$TMP/out/Quota.app" || { echo "The app's signature i
 
 pkill -x Quota 2>/dev/null || true
 sleep 1
-rm -rf /Applications/Quota.app
-ditto "$TMP/out/Quota.app" /Applications/Quota.app
+# admin accounts can write to Applications directly; others are asked for their password once
+SUDO=""
+[ -w /Applications ] || { echo "Your Mac password is needed to put Quota in Applications."; SUDO="sudo"; }
+$SUDO rm -rf /Applications/Quota.app
+$SUDO ditto "$TMP/out/Quota.app" /Applications/Quota.app
+[ -z "$SUDO" ] || sudo chown -R "$(id -un)" /Applications/Quota.app   # so Quota can update itself later
 open /Applications/Quota.app
 echo "Installed Quota $VERSION. Look for it in your menu bar."
