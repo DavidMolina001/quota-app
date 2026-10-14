@@ -46,7 +46,7 @@ Then click Quota in the menu bar and turn on **Launch at login**.
 
 ## Updates
 
-Nothing to do. Quota checks for new versions every few hours, downloads them and
+Nothing to do. Quota checks for new versions every hour, downloads them and
 installs them quietly while its panel is closed. Every update is checked against its
 checksum and must be signed with the same certificate as the copy you have, or it's
 thrown away.
