@@ -4,12 +4,13 @@ A small Mac menu bar app that shows how much of your AI subscriptions you've use
 right next to the clock:
 
 ```
-✳ 42% · 61%  |  ◎ 12%
+✳ 42% · 61%  |  ◎ 12%  |  ✦ 30%
 ```
 
 - **Claude** (Pro/Max): 5-hour, 7-day and model weekly limits, with a pace marker
   that tells you if you'll run out early ("27% ahead · runs out ~Mon · 2 days early").
 - **Codex** (ChatGPT Plus/Pro): your Codex limits and any free resets.
+- **Antigravity** (Google): weekly limits for Gemini models and for Claude & GPT models.
 - **History**: what you used over 7 days, 30 days or all time, by model, and what the
   same usage would have cost on the Claude and OpenAI APIs.
 
@@ -22,7 +23,7 @@ This repository only hosts the downloads.
   install it from [claude.com/code](https://claude.com/code), open Terminal, type
   `claude`, then `/login`, and follow the browser.
 - Optional: the **Codex** command-line tool or the **ChatGPT** desktop app, signed in,
-  for the Codex section.
+  for the Codex section, and Google's **Antigravity** CLI (`agy`) for the Antigravity section.
 
 ## Install (one time)
 
@@ -53,7 +54,7 @@ thrown away.
 
 ## Privacy
 
-- Quota gets its numbers by asking Claude Code and Codex, already on your Mac and
+- Quota gets its numbers by asking Claude Code, Codex and Antigravity, already on your Mac and
   signed in as you, for their own usage reports.
 - History comes from the logs those tools already keep on your Mac. Only token counts,
   model names and dates are read, never your conversations.
