@@ -10,7 +10,9 @@ right next to the clock:
 - **Claude** (Pro/Max): 5-hour, 7-day and model weekly limits, with a pace marker
   that tells you if you'll run out early ("27% ahead · runs out ~Mon · 2 days early").
 - **Codex** (ChatGPT Plus/Pro): your Codex limits and any free resets.
-- **Antigravity** (Google): weekly limits for Gemini models and for Claude & GPT models.
+- **Antigravity** (Google): its two weekly allowances, one shared by the Gemini models and one by
+  the Claude and GPT models you use inside Antigravity (separate from your Claude and ChatGPT plans).
+- **Grok**: a shortcut to your usage page (Grok only shows plan usage inside its own app).
 - **History**: what you used over 7 days, 30 days or all time, by model, and what the
   same usage would have cost on the Claude and OpenAI APIs.
 
