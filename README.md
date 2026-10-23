@@ -4,7 +4,7 @@ A small Mac menu bar app that shows how much of your AI subscriptions you've use
 right next to the clock:
 
 ```
-✳ 42% · 61%  |  ◎ 12%  |  ✦ 30%
+✳ 42% · 61%  |  ◎ 12%  |  ✦ 30%  |  ◆ 8%
 ```
 
 - **Claude** (Pro/Max): 5-hour, 7-day and model weekly limits, with a pace marker
@@ -12,7 +12,7 @@ right next to the clock:
 - **Codex** (ChatGPT Plus/Pro): your Codex limits and any free resets.
 - **Antigravity** (Google): its two weekly allowances, one shared by the Gemini models and one by
   the Claude and GPT models you use inside Antigravity (separate from your Claude and ChatGPT plans).
-- **Grok**: a shortcut to your usage page (Grok only shows plan usage inside its own app).
+- **Grok** (SuperGrok): your weekly credit usage, read from the Grok CLI.
 - **History**: what you used over 7 days, 30 days or all time, by model, and what the
   same usage would have cost on the Claude and OpenAI APIs.
 
@@ -56,7 +56,7 @@ thrown away.
 
 ## Privacy
 
-- Quota gets its numbers by asking Claude Code, Codex and Antigravity, already on your Mac and
+- Quota gets its numbers by asking Claude Code, Codex, Antigravity and Grok, already on your Mac and
   signed in as you, for their own usage reports.
 - History comes from the logs those tools already keep on your Mac. Only token counts,
   model names and dates are read, never your conversations.
