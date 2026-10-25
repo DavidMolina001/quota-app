@@ -21,7 +21,9 @@ This repository only hosts the downloads.
 ## Before you install
 
 - A Mac with macOS 13 or later.
-- **Claude Code**, signed in with your Claude account. If you've never used it:
+- A Claude **Pro or Max** plan (the Free plan has no usage limits for Quota to show).
+- **Claude Code**, signed in with your Claude account. The Claude desktop app's built-in
+  Claude Code counts. If you've never used it:
   install it from [claude.com/code](https://claude.com/code), open Terminal, type
   `claude`, then `/login`, and follow the browser.
 - Optional: the **Codex** command-line tool or the **ChatGPT** desktop app, signed in,
@@ -35,13 +37,15 @@ This repository only hosts the downloads.
 curl -fsSL https://raw.githubusercontent.com/DavidMolina001/quota-app/main/install.sh | sh
 ```
 
-It downloads the latest version, checks it, puts Quota in Applications and opens it.
+It downloads the latest version, checks it is signed by Quota, puts Quota in Applications
+(or your own Applications folder if your Mac account isn't an admin) and opens it.
+No "could not verify" warning appears this way.
 
 **Or by hand:**
 
 1. Download `Quota-x.y.z.zip` from [Releases](https://github.com/DavidMolina001/quota-app/releases/latest) and open it.
 2. Drag **Quota** into **Applications** and open it.
-3. macOS will say it "could not verify" Quota (it's not from the App Store). Open
+3. Because it came through your browser, macOS will say it "could not verify" Quota. Open
    **System Settings → Privacy & Security**, scroll down, click **Open Anyway**.
    You only do this once.
 
@@ -66,4 +70,6 @@ thrown away.
 
 ## Uninstall
 
-Click Quota → Quit Quota, then drag it from Applications to the Bin.
+Click Quota → Quit Quota, then drag it from Applications to the Bin. Its usage log stays in
+`~/Library/Application Support/Quota`; drag that folder to the Bin too if you want it gone.
+If you turned on Launch at login, turn it off first (or remove Quota under System Settings → General → Login Items).
