@@ -1,11 +1,14 @@
 # Quota
 
 A small Mac menu bar app that shows how much of your AI subscriptions you've used,
-right next to the clock:
+right next to the clock.
 
-```
-✳ 42% · 61%  |  ◎ 12%  |  ✦ 30%  |  ◆ 8%
-```
+![Quota in the menu bar](screenshots/menu-bar.png)
+
+<p>
+<img src="screenshots/panel.png" width="300" alt="The Quota panel">
+<img src="screenshots/history-by-company.png" width="300" alt="History by company">
+</p>
 
 - **Claude** (Pro/Max): 5-hour, 7-day and model weekly limits, with a pace marker
   that tells you if you'll run out early ("27% ahead · runs out ~Mon · 2 days early").
@@ -13,8 +16,15 @@ right next to the clock:
 - **Antigravity** (Google): its two weekly allowances, one shared by the Gemini models and one by
   the Claude and GPT models you use inside Antigravity (separate from your Claude and ChatGPT plans).
 - **Grok** (SuperGrok): your weekly credit usage, read from the Grok CLI.
-- **History**: what you used over 7 days, 30 days or all time, by model, and what the
-  same usage would have cost on the Claude and OpenAI APIs.
+- **History**: what you used over 7 days, 30 days or all time, by company or by model, in each
+  company's own colours, and what the same usage would have cost on the Claude and OpenAI APIs.
+- **Your menu bar, your way**: choose which services show in the menu bar and in the panel,
+  drag them into your order, and pick a style (full, one number per service, a single number,
+  or logos only). Right-click the menu bar text for a quick menu.
+
+<p>
+<img src="screenshots/window-menu-bar.png" width="600" alt="Menu Bar settings">
+</p>
 
 This repository only hosts the downloads.
 
@@ -22,12 +32,10 @@ This repository only hosts the downloads.
 
 - A Mac with macOS 13 or later.
 - A Claude **Pro or Max** plan (the Free plan has no usage limits for Quota to show).
-- **Claude Code**, signed in with your Claude account. The Claude desktop app's built-in
-  Claude Code counts. If you've never used it:
-  install it from [claude.com/code](https://claude.com/code), open Terminal, type
-  `claude`, then `/login`, and follow the browser.
-- Optional: the **Codex** command-line tool or the **ChatGPT** desktop app, signed in,
-  for the Codex section, and Google's **Antigravity** CLI (`agy`) for the Antigravity section.
+- **Claude Code**. The Claude desktop app's built-in Claude Code counts. If you don't have it,
+  Quota's Setup page installs it for you.
+- Optional: the **Codex** CLI or the **ChatGPT** desktop app, Google's **Antigravity** CLI (`agy`)
+  and the **Grok** CLI, for those sections.
 
 ## Install (one time)
 
@@ -49,7 +57,22 @@ No "could not verify" warning appears this way.
    **System Settings → Privacy & Security**, scroll down, click **Open Anyway**.
    You only do this once.
 
-Then click Quota in the menu bar and turn on **Launch at login**.
+Then click Quota in the menu bar and turn on **Launch at login**. Quota opens its Setup page the first time.
+
+## Sign in with your own accounts
+
+Open Quota → **Setup**. Each service has a **Sign In** button: it opens Terminal, runs that
+service's own sign-in command, and your browser opens the service's sign-in page. Sign in there
+with your own account and Setup ticks itself off.
+
+If the browser doesn't open, Terminal shows the link to open yourself. Codex and Grok also offer
+**Use a Code**: Terminal shows a short code that you type on the service's website.
+Antigravity asks you in Terminal to pick Google OAuth (your Google account) or a Google Cloud project.
+
+![Setup](screenshots/setup.png)
+
+Quota never sees your password: you sign in on each company's own website, and their own tools
+keep the sign-in.
 
 ## Updates
 
